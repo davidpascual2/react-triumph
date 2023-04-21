@@ -6,6 +6,7 @@ import mountainImage1 from '../../../assets/mountains-bg.jpg';
 import mountainImage2 from '../../../assets/mountains5.jpeg';
 import mountainImage3 from '../../../assets/snowy2.jpeg';
 import biblestudy2 from '../../../assets/biblestudy2.jpg';
+import triumph from '../../../assets/logo.001.beige.PNG';
 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -31,8 +32,9 @@ export default function Navbar() {
     <>
         <div class="hotdog">
             <header class="header1">
-                {/* <img class="logo" src="./assets/sda-logo.png">  */}
-                <h2 class="triumph">Triumph SDA</h2>
+                {/* <div className='imageContainer'> */}
+                    <img className="triumphLogo" src={triumph} alt='tri'/>
+                {/* </div> */}
             </header>
             {/* <nav class="navbar navbar-expand-lg">
                 <ul class="nav">

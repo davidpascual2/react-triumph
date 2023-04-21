@@ -24,8 +24,16 @@ a {
 
 .header1 {
     height: 5rem;
-    background-color: #0099bf;;
+    background-color: lightblue;
     border-radius: 1rem 1rem 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triumphLogo{
+    width: auto;
+    height: 280px;
 }
 
 .navbar {
