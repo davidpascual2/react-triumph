@@ -1,0 +1,11 @@
+.leaders {
+    display: flex;
+    padding: 0.5rem;
+    margin-right: 10rem;
+    margin-left: 10rem;
+    flex-direction: column;
+    background-color:whitesmoke;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    /* width: 75%; */
+}
