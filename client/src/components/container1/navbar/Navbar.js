@@ -79,9 +79,9 @@ export default function Navbar() {
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Prayer Requests</a>
                             </li>
-                            <li class="nav-item">
+                            {/* <li class="nav-item">
                                 <a class="nav-link disabled">Disabled</a>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>
