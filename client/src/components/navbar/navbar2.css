@@ -1,0 +1,45 @@
+.navbarContainer2{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    margin-right: 8rem;
+    margin-left: 8rem;
+    flex-direction: column;
+    /* align-items: center; */
+    
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* .triumph {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color:black
+}
+
+.header1 {
+    height: 5rem;
+    background-color: lightblue;
+    border-radius: 1rem 1rem 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triumphLogo{
+    width: auto;
+    height: 280px;
+}
+
+.navbar {
+    padding-left: 2rem;
+    margin-top: 0.5rem;
+    background-color: red;
+    border-bottom: solid #999;
+    border-top: solid #999;
+} */

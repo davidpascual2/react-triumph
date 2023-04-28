@@ -20,6 +20,16 @@
     padding: 1rem;
     display: flex;
     gap: 1rem;
-    margin: 4rem 0rem 0rem 0rem;
+    /* margin: 4rem 0rem 0rem 0rem; */
+    margin-bottom: 4rem;
     flex:1
+}
+
+.pastor{
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    /* margin: 4rem 0rem 0rem 0rem; */
+    margin-bottom: 4rem;
+    /* flex: 1 1; */
 }

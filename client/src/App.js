@@ -1,18 +1,22 @@
 
-import Navbar from './components/container1/navbar/Navbar';
+import Carousel from './components/navbar/Navbar2';
+import Navbar from './components/container1/carousel/Carousel';
 import Home from './pages/home/Home'
 import {
   createBrowserRouter,
   RouterProvider,
   Outlet,
 } from "react-router-dom";
+import "./index.css"
+import Navbar2 from './components/navbar/Navbar2';
 
 
 const Layout = () => {
 //=========================
   return(
     <>
-    {/* <Navbar /> */}
+    <Navbar2 />
+    {/* <Carousel /> */}
     <Outlet />
     </>
 
@@ -39,7 +43,7 @@ function App() {
 
 //========================================
   return (
-    <div className="App">
+    <div className="app">
       <RouterProvider router={router} />
     </div>
   );

@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app{
+    background-image: url('./assets/mountains-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 5rem;
+}

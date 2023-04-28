@@ -15,7 +15,7 @@ export default function Requests() {
         </div>
     </div> */}
 
-    <div className="requests">
+    <div className="requests" id="requests">
             <div className="create">
                 <h2>Have a Prayer request?</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, vitae reiciendis? Impedit ad maiores tenetur enim eveniet earum officia neque repellat delectus voluptate reiciendis maxime, non dicta, saepe rerum velit.</p>
