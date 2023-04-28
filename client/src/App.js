@@ -9,6 +9,10 @@ import {
 } from "react-router-dom";
 import "./index.css"
 import Navbar2 from './components/navbar/Navbar2';
+import Leaders from './components/container3/leaders/Leaders';
+import About from './components/container2/about/About';
+import Requests from './components/container4/requests/Requests';
+import Footer from './components/footer/Footer';
 
 
 const Layout = () => {
@@ -16,8 +20,8 @@ const Layout = () => {
   return(
     <>
     <Navbar2 />
-    {/* <Carousel /> */}
     <Outlet />
+    <Footer />
     </>
 
   );
@@ -31,10 +35,18 @@ const router = createBrowserRouter([
         path:'/',
         element:<Home />
       },
-      // {
-      //   path:'/',
-      //   element:<Home />
-      // },
+      {
+        path:'/about',
+        element:<About />
+      },
+      {
+        path:'/leaders',
+        element:<Leaders />
+      },
+      {
+        path:'/requests',
+        element:<Requests />
+      },
     ]
   }
 ]);

@@ -1,14 +1,26 @@
 .requests {
     display: flex;
     padding: 1.5rem;
-    margin-right: 8rem;
-    margin-left: 8rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
     flex-direction: column;
     background-color: whitesmoke;
-    border-radius: 1rem;
+    border-radius: 0px 0px 1rem 1rem;
     margin-bottom: 1rem;
     /* width: 75%; */
 }
+
+.fluidContainerRequests{
+  background-color: yellow;
+  display: flex;
+  padding: 1.5rem;
+  /* flex-direction: column; */
+  /* background-color: whitesmoke; */
+  border-radius: 0px 0px 1rem 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ====================== */
 
 .create {
     max-width: 400px;

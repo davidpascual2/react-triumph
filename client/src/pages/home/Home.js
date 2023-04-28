@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../../components/container1/carousel/Carousel';
+// import Navbar from '../../components/container1/carousel/Carousel';
 import About from '../../components/container2/about/About';
 import Leaders from '../../components/container3/leaders/Leaders';
 import Requests from '../../components/container4/requests/Requests';
@@ -17,10 +17,10 @@ export default function
         <div className='home'>
             {/* <Navbar2 /> */}
             <Carousel />
-            <About/>
-            <Leaders/>
-            <Requests/>
-            <Footer/>
+            {/* <About/> */}
+            {/* <Leaders/> */}
+            {/* <Requests/> */}
+            {/* <Footer/> */}
         </div>
     </>
   )
