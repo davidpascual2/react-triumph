@@ -13,7 +13,7 @@
 }
 
 .fluidContainerCar{
-    background-color: yellow;
+    background-color: whitesmoke;
     /* display: flex; */
     /* flex-direction: column; */
     padding: 0.5rem;
@@ -190,7 +190,7 @@ border-radius: 1rem;
 }
 
 .fluidContainerAbout{
-    background-color: yellow;
+    background-color: whitesmoke;
     padding: 1.5rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
@@ -201,16 +201,13 @@ border-radius: 1rem;
     padding-right: 5rem;
 }
 .triumph-pic2 {
-    /* width: 50%;
-    margin-top: 1rem;
-    padding-right: 3rem; */
     width: 100%;
-    height: 400px;
-    max-width: 600px;
+    /* height: 400px; */
+    max-height: 350px;
+    max-width: 500px;
     margin-top: 1rem;
     padding-right: 3rem;
     object-fit: cover;
-    /* padding-left: 3rem; */
 }
 
 /* .photo-container2{
@@ -263,14 +260,19 @@ border-radius: 1rem;
 }
 
 .schedule-container2{
-    /* background-color: rgba(125, 123, 123, 0.25); */
     padding: 10px;
     display: flex;
     flex-direction: column;
-    /* align-content: space-between; */
     justify-content: center;
-    /* margin-top: 5rem; */
     margin-right: 13rem;
+}
+
+.scheduleContainer3{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-right: 13rem; */
 }
 
 .schedule-container2 h5{
@@ -290,15 +292,52 @@ border-radius: 1rem;
 }
 
 .worshipImg{
-    /* width: 50%; */
-    /* margin-top: 1rem; */
-    /* padding-right: 3rem; */
-    /* padding-left: 3rem; */
     width: 100%;
-    height: 400px;
-    max-width: 600px;
+    /* height: 400px; */
+    max-height: 350px;
+    max-width: 500px;
     margin-top: 1rem;
-    /* padding-right: 3rem; */
     object-fit: cover;
     padding-left: 3rem;
+}
+
+.worshipImgContainer{
+    display: flex;
+}
+
+/* ================================ */
+
+@media screen and (max-width: 1024px) {
+    .whoWeAreContainer{
+        flex-direction: column;
+   }
+}
+
+@media screen and (max-width: 1024px) {
+    .whoWeAre{
+        padding-left: unset;
+        padding-right: unset;
+   }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .scheduleMap2{
+        flex-direction: column;
+        /* padding-left: unset; */
+   }
+}
+
+/* @media screen and (max-width: 1024px) {
+    .worshipImgContainer{
+        justify-content: center;
+       
+   }
+} */
+
+@media screen and (max-width: 1024px) {
+    .worshipImg{
+        margin: auto;
+        padding-left: unset;
+   }
 }

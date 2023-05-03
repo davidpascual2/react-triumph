@@ -16,5 +16,5 @@ code {
     background-image: url('./assets/mountains-bg.jpg');
     background-attachment: fixed;
     background-size: cover;
-    padding: 5rem;
+    /* padding: 5rem; */
 }

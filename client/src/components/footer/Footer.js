@@ -27,7 +27,7 @@ export default function Footer() {
                 <p>Copyright Triumph Adventist Chruch &copy; 2023</p>
             </div>
         </div> */}
-        <div className='fluidContainerFooter container-fluid d-flex flex-md-row flex-column'>
+        <div className='fluidContainerFooter container-sm d-flex flex-md-row flex-column'>
             <div className='logoContainer2'>
                 <img className='triumphLogo2' src={triumph} alt="" />
 

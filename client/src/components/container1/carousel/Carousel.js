@@ -100,7 +100,7 @@ export default function Navbar() {
 
 
 
-        <div class="fluidContainerCar container-fluid">
+        <div class="fluidContainerCar container-sm">
             <div className="announcement">
                 <div className='carousel-container'>
                     <Slider {...settings}>
@@ -201,7 +201,7 @@ export default function Navbar() {
             </div>
         </div> */}
 
-        <div className="fluidContainerAbout container-fluid" id='about'>
+        <div className="fluidContainerAbout container-sm" id='about'>
             
             <div class="whoWeAreContainer container-fluid">
                 <div className="whoWeAre">
@@ -219,7 +219,31 @@ export default function Navbar() {
             
             <div className='scheduleMap2 container-fluid'>
                 
-                <div class="schedule-container2">
+                {/* <div class="schedule-container2">
+                    <h2>Worship with us</h2>
+                    <h5>Saturday schedule</h5>
+                    
+                    <div class="dateDescContainer2">
+                        <p>{scheduleTimes.sabbathschool}</p>
+                        <p>Sabbath School</p>
+                    </div>
+                    <div class="dateDescContainer2">
+                        <p>{scheduleTimes.announcements}</p>
+                        <p>Announcements</p>
+                    </div>
+                    
+                    <div class="dateDescContainer2">
+                        <p>{scheduleTimes.songworship2}</p>
+                        <p>Song Worship</p>
+                    </div>
+                    
+                    <div class="dateDescContainer2">
+                        <p>{scheduleTimes.sermon}</p>
+                        <p>Sermon</p>
+                    </div>
+                </div> */}
+
+                <div class="scheduleContainer3 container">
                     <h2>Worship with us</h2>
                     <h5>Saturday schedule</h5>
                     
@@ -242,8 +266,9 @@ export default function Navbar() {
                         <p>Sermon</p>
                     </div>
                 </div>
-                
-                <img className='worshipImg' src={worship} alt="" />
+                {/* <div className="worshipImgContainer"> */}
+                    <img className='worshipImg' src={worship} alt="" />
+                {/* </div> */}
             </div>
         </div>
     </>
