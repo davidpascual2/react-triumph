@@ -81,6 +81,8 @@ a {
     /* width: 100%; */
     width: 30%;
     border-radius: 10px;
+
+    max-height: 200px;
 }
 
 .announcementImage {
@@ -100,7 +102,7 @@ border-radius: 1rem;
 
 
 
-/* =================== Carousel ======================= */
+/* =================== CAROUSEL ======================= */
 
 .carousel-container{
     /* display: flex; */
@@ -121,17 +123,6 @@ border-radius: 1rem;
 
 .carimage{
 
-    /* max-width: 100%;
-    height: auto; */
-
-    /* width: auto; */
-    /* max-height: 250px; */
-    /* object-fit: contain;  */
-    /* or object-fit: cover; depending on your desired behavior */
-    /* width: 100%; */
-    /* width: 70%; */
-    /* border-radius: 10px; */
-
     width: 100%;
     height: 200px;
     max-width: 600px;
@@ -140,24 +131,22 @@ border-radius: 1rem;
 }
 
 
-/* .carimage2{
-    width: 185px;
-    height: 100px;
-}
-.carimage3{
-    width: 185px;
-    height: 100px;
-}
-.carimage4{
-    width: 185px;
-    height: 100px;
-} */
-
 .slick-dots li button:before{
     color:#fff
 }
 
-.announcement-container1 {
+/* ============== VERSE ============= */
+.verse-container{
+    padding: 1rem;
+    flex: 1;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    border: 1px solid lightgray;
+    /* margin: 0.5rem; */
+    
+}
+
+.verse-desc {
     /* background-color: lightgrey; */
     border-radius: 1rem;
     padding: 0.5rem;
@@ -165,29 +154,15 @@ border-radius: 1rem;
     width: 100%;
 }
 
-.announcement-desc {
-    padding: 1rem;
-    flex: 1;
-    background-color: whitesmoke;
-    border-radius: 1rem;
-    border: 1px solid lightgray;
-    margin: 0.5rem;
-    
-    }
 
-/*============== About Triumph ============== */
 
-.aboutTriumph {
-    /* display: flex; */
-    padding: 1.5rem;
-    margin-right: 4rem;
-    margin-left: 4rem;
-    /* flex-direction: column;
-    align-items: center; */
-    background-color: whitesmoke;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-}
+
+
+
+
+
+/*=================== ABOUT TRIUMPH ==================== */
+
 
 .fluidContainerAbout{
     background-color: whitesmoke;
@@ -196,10 +171,25 @@ border-radius: 1rem;
     margin-bottom: 1rem;
 }
 
+/* ==== WHO WE ARE ==== */
+
+
+.whoWeAreContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-bottom: 3rem;
+}
 .whoWeAre{
     padding-left: 3rem;
     padding-right: 5rem;
 }
+
+.whoWeAreContainer p{
+    margin-top: 1rem;
+}
+
 .triumph-pic2 {
     width: 100%;
     /* height: 400px; */
@@ -210,43 +200,9 @@ border-radius: 1rem;
     object-fit: cover;
 }
 
-/* .photo-container2{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 1.5rem;
-}
 
-.photo-container2 p{
-    margin-top: 1rem;
-} */
+/* ====== WORSHIP WITH US ====== */
 
-
-
-.whoWeAreContainer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 1.5rem;
-    padding-bottom: 3rem;
-}
-
-.whoWeAreContainer p{
-    margin-top: 1rem;
-}
-
-
-
-
-
-.triumphMap2{
-    width: 100%;
-    height: 350px;
-    max-width: 350px;
-    object-fit: cover;
-    margin-top: 5rem;
-    border: 1px solid #999;
-}
 .scheduleMap2{
     display: flex;
     flex-direction: row-reverse;
@@ -256,6 +212,7 @@ border-radius: 1rem;
     /* does not take other margins into account */
     padding-top: 3rem;
     padding-bottom: 3rem;
+    gap:5rem;
 
 }
 
@@ -296,7 +253,7 @@ border-radius: 1rem;
     /* height: 400px; */
     max-height: 350px;
     max-width: 500px;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     object-fit: cover;
     padding-left: 3rem;
 }
@@ -305,11 +262,48 @@ border-radius: 1rem;
     display: flex;
 }
 
+.time{
+    display: flex;
+    justify-content: space-between;
+}
+
 /* ================================ */
+
+@media screen and (max-width: 768px) {
+    .slide1{
+        flex-direction: column;
+        align-items: center;
+   }
+}
+
+@media screen and (max-width: 768px) {
+    .slide-desc{
+        width: 100%;
+        height:150px;
+        max-height: 150px;
+   }
+}
+
+@media screen and (max-width: 988px) {
+    .carimage{
+        max-width: 500px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+    .carimage{
+        max-width: 520px;
+   }
+}
+
+
+
+
 
 @media screen and (max-width: 1024px) {
     .whoWeAreContainer{
         flex-direction: column;
+        gap:20px;
    }
 }
 
@@ -328,16 +322,30 @@ border-radius: 1rem;
    }
 }
 
-/* @media screen and (max-width: 1024px) {
-    .worshipImgContainer{
-        justify-content: center;
-       
-   }
-} */
 
 @media screen and (max-width: 1024px) {
     .worshipImg{
         margin: auto;
         padding-left: unset;
+   }
+}
+
+@media screen and (max-width: 1024px) {
+    .triumph-pic2{
+        margin: auto;
+        padding-right: unset;
+   }
+}
+
+
+@media screen and (max-width: 425px) {
+    .scheduleMap2{
+        gap: 1rem;
+   }
+}
+
+@media screen and (min-width: 768px) {
+    .scheduleMap2{
+        gap: 3rem;
    }
 }

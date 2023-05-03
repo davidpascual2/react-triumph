@@ -23,7 +23,7 @@ const settings = {
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 10000,
     // Additional settings as needed
   };
 
@@ -143,8 +143,8 @@ export default function Navbar() {
                     </Slider>
                 </div>
 
-                <div class="announcement-desc">
-                    <div class="announcement-container1">
+                <div class="verse-container">
+                    <div class="verse-desc">
                         <h2>Verse of the week</h2>
                         <p>{verse}</p>
                     </div>
@@ -243,7 +243,7 @@ export default function Navbar() {
                     </div>
                 </div> */}
 
-                <div class="scheduleContainer3 container">
+                {/* <div class="scheduleContainer3 container">
                     <h2>Worship with us</h2>
                     <h5>Saturday schedule</h5>
                     
@@ -265,10 +265,36 @@ export default function Navbar() {
                         <p>{scheduleTimes.sermon}</p>
                         <p>Sermon</p>
                     </div>
+                </div> */}
+
+                <div class="scheduleContainerTest container">
+                    <h2>Worship with us</h2>
+                    <h5>Saturday schedule</h5>
+                    
+                    <div class="time">
+                        <p>{scheduleTimes.sabbathschool}</p>
+                        <p>Sabbath School</p>
+                    </div>
+
+                    <div class="time">
+                        <p>{scheduleTimes.announcements}</p>
+                        <p>Announcements</p>
+                    </div>
+
+                    <div class="time">
+                        <p>{scheduleTimes.songworship2}</p>
+                        <p>Song Worship</p>
+                    </div>
+
+                    <div class="time">
+                        <p>{scheduleTimes.sermon}</p>
+                        <p>Sermon</p>
+                    </div>
                 </div>
-                {/* <div className="worshipImgContainer"> */}
-                    <img className='worshipImg' src={worship} alt="" />
-                {/* </div> */}
+                 
+                <img className='worshipImg' src={worship} alt="" />
+                
+                
             </div>
         </div>
     </>

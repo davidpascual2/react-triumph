@@ -15,7 +15,7 @@ export default function Leaders() {
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium eum cumque facere eos laborum natus, illum maxime, ut at, atque quas voluptate dolorum corrupti. Earum error esse unde vero distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
 
           <div className='pastor'>
-            <img className="triumphLogo" src={kenneth} alt='eld'/>
+            <img className="leaderImg" src={kenneth} alt='eld'/>
             <div className='elder-desc'>
               <h2>Kenneth Martinez</h2>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
@@ -26,7 +26,7 @@ export default function Leaders() {
             <div className='row'>
 
               <div className='elderz col-xxl-3 col-md-6 col-12'>
-                <img className="triumphLogo rounded" src={obed} alt='eld'/>
+                <img className="leaderImg rounded" src={obed} alt='eld'/>
                 <div className='elder-desc'>
                   <h2>Obed</h2>
                   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
@@ -34,7 +34,7 @@ export default function Leaders() {
               </div>
 
               <div className='elderz col-xxl-3 col-md-6 col-12'>
-                <img className="triumphLogo rounded" src={eddie} alt='eld'/>
+                <img className="leaderImg rounded" src={eddie} alt='eld'/>
                 <div className='elder-desc'>
                   <h2>Eddie</h2>
                   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.  </p>
@@ -42,7 +42,7 @@ export default function Leaders() {
               </div>
 
               <div className='elderz col-xxl-3 col-md-6 col-12'>
-                <img className="triumphLogo rounded" src={daisy} alt='eld'/>
+                <img className="leaderImg rounded" src={daisy} alt='eld'/>
                 <div className='elder-desc'>
                   <h2>Daisy</h2>
                   <p>Lorem ipsum dolor Ipsa veniam provident et rerum, sint voluptatibus iusto eos quaerat assumenda esse aliquam!</p>
@@ -51,7 +51,7 @@ export default function Leaders() {
 
                {/* col-12 means if small screen, then make elder container take up entire screen size and half if its a medium screen (2 per row) */}
               <div className='elderz col-xxl-3 col-md-6 col-12'>
-                <img className="triumphLogo rounded" src={trino} alt='led'/>
+                <img className="leaderImg rounded" src={trino} alt='led'/>
                 <div className='elder-desc'>
                   <h2>Trino</h2>
                   <p>Lorem ipsum dolor,  inventore voluptas  </p>
