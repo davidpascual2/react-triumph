@@ -18,7 +18,7 @@ export default function Leaders() {
             <img className="leaderImg" src={kenneth} alt='eld'/>
             <div className='elder-desc'>
               <h2>Kenneth Martinez</h2>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. adipisicing elit. Laudantium eum cumque facere eos laborum natus.</p>
             </div>
           </div>
 
@@ -29,7 +29,7 @@ export default function Leaders() {
                 <img className="leaderImg rounded" src={obed} alt='eld'/>
                 <div className='elder-desc'>
                   <h2>Obed</h2>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+                  <p>Lorem ipsum.</p>
                 </div>
               </div>
 
@@ -37,7 +37,7 @@ export default function Leaders() {
                 <img className="leaderImg rounded" src={eddie} alt='eld'/>
                 <div className='elder-desc'>
                   <h2>Eddie</h2>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.  </p>
+                  <p>Lorem, ipsum dolor.  </p>
                 </div>
               </div>
 
@@ -45,7 +45,7 @@ export default function Leaders() {
                 <img className="leaderImg rounded" src={daisy} alt='eld'/>
                 <div className='elder-desc'>
                   <h2>Daisy</h2>
-                  <p>Lorem ipsum dolor Ipsa veniam provident et rerum, sint voluptatibus iusto eos quaerat assumenda esse aliquam!</p>
+                  <p>Lorem ipsum dolor</p>
                 </div>
               </div>
 
@@ -54,7 +54,7 @@ export default function Leaders() {
                 <img className="leaderImg rounded" src={trino} alt='led'/>
                 <div className='elder-desc'>
                   <h2>Trino</h2>
-                  <p>Lorem ipsum dolor,  inventore voluptas  </p>
+                  <p>Lorem ipsum dolor.  </p>
                 </div>
               </div>
             </div>
