@@ -1,9 +1,31 @@
 import axios from 'axios';
-import React, {useState} from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from '../../ReCAPTCHA/ReCAPTCHA';
+import React, {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom'
 import './requests.css'
 
 export default function Requests() {
+
+    const [token, setToken] = useState('')
+
+    // const handleReCAPTCHA = () => {
+    //     window.grecaptcha.enterprise
+    //       .execute("6LfNNeYlAAAAAKxcz4Qwjw-dK8tZOGwY09RRHfbo", { action: "user_input" })
+    //       .then((token) => setToken(token));
+    // };
+
+    const handleReCAPTCHA = async () => {
+        try {
+          const token = await window.grecaptcha.enterprise.execute("6LfNNeYlAAAAAKxcz4Qwjw-dK8tZOGwY09RRHfbo", { action: "user_input" });
+          setToken(token);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      
+
+// =====================================
     
     const navigate = useNavigate();
     const [name, setName] = useState("")
@@ -31,30 +53,19 @@ export default function Requests() {
                 console.log("Status code:", error.response.status);
                 console.log("Response data:", error.response.data);
                 console.log("Headers:", error.response.headers);
-              } else if (error.request) {
+            } else if (error.request) {
                 // The request was made but no response was received
                 console.log("Request:", error.request);
-              } else {
+            } else {
                 // Something else happened while setting up the request
                 console.log("Error:", error.message);
-              }
+            }
         }
     }
 
 //======================================
   return (
     <>
-    {/* <div className='requests'>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Name</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name"/>
-            </div>
-            <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-    </div> */}
-
     
     <div className="fluidContainerRequests container-sm" id="requests">
         <div className="create">
@@ -81,7 +92,19 @@ export default function Requests() {
                 >
                 </textarea>
 
-                <button type="submit" id="submit-request">submit prayer request</button>
+                {/* <div id="recaptcha-container"></div> */}
+
+                <ReCAPTCHA 
+                    sitekey="6LfaYOclAAAAADnr7215oSNyJx7Ltna5bXcRe-Jf"
+                    onChange={handleReCAPTCHA}
+                />
+
+                <button 
+                    type="submit" 
+                    id="submit-request"
+                >
+                submit prayer request
+                </button>
             </form>
         </div>
     </div>
