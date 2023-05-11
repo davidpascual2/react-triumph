@@ -1,37 +1,53 @@
 import axios from 'axios';
 import ReCAPTCHA from "react-google-recaptcha";
-// import ReCAPTCHA from '../../ReCAPTCHA/ReCAPTCHA';
-import React, {useState, useEffect} from 'react';
-import {useNavigate} from 'react-router-dom'
+import React, {useState, useEffect, useRef } from 'react';
+import {useNavigate} from 'react-router-dom';
+// import { useAsyncScript } from "react-async-script";
 import './requests.css'
 
-export default function Requests() {
+export default function Requests(props) {
 
-    const [token, setToken] = useState('')
+    const navigate = useNavigate();
+    const [name, setName] = useState("")
+    const [request, setRequest] = useState("");
+    const [isVarified, setIsVarified] = useState(false);
+    const recaptchaRef = useRef(null);
+    // const RECAPTCHA_KEY = "6LfNNeYlAAAAAKxcz4Qwjw-dK8tZOGwY09RRHfbo";
+    const newRECAPTCHA_KEY = '6LdjyPslAAAAAPdwGgwLmMPk8-Fuuuid0n8C4Oqz';
+   
 
-    // const handleReCAPTCHA = () => {
-    //     window.grecaptcha.enterprise
-    //       .execute("6LfNNeYlAAAAAKxcz4Qwjw-dK8tZOGwY09RRHfbo", { action: "user_input" })
-    //       .then((token) => setToken(token));
+    const handleOnChange = (value) => {
+        console.log("Captcha Value:", value);
+        // setText(event.target.value);
+        // setName(event.target.value)
+        setIsVarified(true);
+    }
+
+
+
+    // const handleReCAPTCHA = async () => {
+    //     try {
+    //       const token = await window.grecaptcha.enterprise.execute(
+    //         RECAPTCHA_KEY,
+    //         { action: 'user_input' }
+    //       );
+    //       setToken(token);
+    //     } catch (error) {
+    //       console.error(error);
+    //     }
     // };
 
-    const handleReCAPTCHA = async () => {
-        try {
-          const token = await window.grecaptcha.enterprise.execute("6LfNNeYlAAAAAKxcz4Qwjw-dK8tZOGwY09RRHfbo", { action: "user_input" });
-          setToken(token);
-        } catch (error) {
-          console.error(error);
-        }
-      };
       
 
 // =====================================
     
-    const navigate = useNavigate();
-    const [name, setName] = useState("")
-    const [request, setRequest] = useState("");
     const handleSubmit = async(e) => {
         e.preventDefault();
+        setIsVarified(false);
+        setName("") //should this be in try catch?
+        setRequest(""); //should this be in try catch?
+        //reset captcha
+        recaptchaRef.current.reset(); //should this be in try catch?
 
         const newRequest = {
             name,
@@ -39,13 +55,18 @@ export default function Requests() {
         };
         try{
             const response = await axios.post('/api/requests', newRequest);
-                if(response.status){
+                if(response.status){ //if response is true
                     // navigate('/')
                     console.log(response)
-                } else {
+                    // setName("");
+                    // setRequest("");
+                    // recaptchaRef.current.reset();
+                    
+                } else { //if something is wrong with response
                     console.log("SOMETHING WENT WRONG!")
                     // console.err(err)
                 }
+        
         }catch (error){
             console.log(error)
             if (error.response) {
@@ -78,6 +99,7 @@ export default function Requests() {
                     className="from-control" 
                     id="memberName" 
                     placeholder="Enter Name"
+                    value={name}
                     onChange={e=>setName(e.target.value)}
                 />
 
@@ -87,21 +109,22 @@ export default function Requests() {
                     className="form-control" 
                     id="requestDetails" 
                     placeholder="Enter Request Details"
+                    value={request}
                     onChange={e=>setRequest(e.target.value)}
 
                 >
                 </textarea>
 
-                {/* <div id="recaptcha-container"></div> */}
-
                 <ReCAPTCHA 
-                    sitekey="6LfaYOclAAAAADnr7215oSNyJx7Ltna5bXcRe-Jf"
-                    onChange={handleReCAPTCHA}
+                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" //test key 
+                    onChange={handleOnChange}
+                    ref={recaptchaRef}
                 />
 
                 <button 
                     type="submit" 
                     id="submit-request"
+                    disabled={!isVarified}
                 >
                 submit prayer request
                 </button>
@@ -112,5 +135,40 @@ export default function Requests() {
   )
 }
 
+
+ // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     if (!token) {
+    //       alert('Please complete the ReCAPTCHA challenge');
+    //       return;
+    //     } else {
+
+    //         const newRequest = {
+    //             name,
+    //             request,
+    //             token,
+    //         };
+    //         try {
+    //         const response = await axios.post('/api/requests', newRequest);
+    //         if (response.status === 200) {
+    //             // navigate('/');
+    //             console.log(response);
+    //         } else {
+    //             console.log('SOMETHING WENT WRONG!');
+    //         }
+    //         } catch (error) {
+    //         console.log(error);
+    //         if (error.response) {
+    //             console.log('Status code:', error.response.status);
+    //             console.log('Response data:', error.response.data);
+    //             console.log('Headers:', error.response.headers);
+    //         } else if (error.request) {
+    //             console.log('Request:', error.request);
+    //         } else {
+    //             console.log('Error:', error.message);
+    //         }
+    //         }
+    //     }
+    //   };
 
 
