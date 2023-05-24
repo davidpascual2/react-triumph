@@ -299,38 +299,38 @@ border-radius: 1rem;
 
 
 
-
-@media screen and (max-width: 1024px) {
+/* change */
+@media screen and (max-width: 992px) {
     .whoWeAreContainer{
         flex-direction: column;
         gap:20px;
    }
 }
-
-@media screen and (max-width: 1024px) {
+/* change */
+@media screen and (max-width: 992px) { 
     .whoWeAre{
         padding-left: unset;
         padding-right: unset;
    }
 }
 
-
-@media screen and (max-width: 1024px) {
+/* change */
+@media screen and (max-width: 992px) {
     .scheduleMap2{
         flex-direction: column;
         /* padding-left: unset; */
    }
 }
 
-
-@media screen and (max-width: 1024px) {
+/* change */
+@media screen and (max-width: 992px) {
     .worshipImg{
         margin: auto;
         padding-left: unset;
    }
 }
-
-@media screen and (max-width: 1024px) {
+/* change */
+@media screen and (max-width: 992px) {
     .triumph-pic2{
         margin: auto;
         padding-right: unset;
@@ -349,3 +349,11 @@ border-radius: 1rem;
         gap: 3rem;
    }
 }
+
+@media screen and (min-width: 1400px) {
+    .scheduleContainerTest{
+        margin-left: 10rem;
+        margin-right: 10rem;
+   }
+}
+

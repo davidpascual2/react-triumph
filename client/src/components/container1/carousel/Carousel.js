@@ -128,15 +128,15 @@ export default function Navbar() {
                             <img className="carimage" src={triumphIG} alt='example1'/>
                             <div className='slide-desc'>
                                 <h2>Follow us!</h2>
-                                <p> Follow us on Instagram and Facebook to stay up to date on church activties and connect with other members </p>
+                                <p> Follow us on Instagram and Facebook to stay up to date on church activties </p>
                             </div>
                         </div>
 
                         <div className='slide1'>
                             <img class="carimage" src={manhiking} alt='example1'/>
                             <div className='slide-desc'>
-                                <h2>Bible Studies</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet sed error fuga ex? Aspernatur deserunt accusamus, eveniet .</p>
+                                <h2>Example</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet sed error fuga ex?</p>
                             </div>
                         </div>
                         {/* Add more slides as needed */}

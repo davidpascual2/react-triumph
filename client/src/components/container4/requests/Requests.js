@@ -7,6 +7,7 @@ import './requests.css'
 
 export default function Requests(props) {
 
+
     const navigate = useNavigate();
     const [name, setName] = useState("")
     const [request, setRequest] = useState("");
@@ -21,23 +22,7 @@ export default function Requests(props) {
         // setText(event.target.value);
         // setName(event.target.value)
         setIsVarified(true);
-    }
-
-
-
-    // const handleReCAPTCHA = async () => {
-    //     try {
-    //       const token = await window.grecaptcha.enterprise.execute(
-    //         RECAPTCHA_KEY,
-    //         { action: 'user_input' }
-    //       );
-    //       setToken(token);
-    //     } catch (error) {
-    //       console.error(error);
-    //     }
-    // };
-
-      
+    }  
 
 // =====================================
     
@@ -91,7 +76,7 @@ export default function Requests(props) {
     <div className="fluidContainerRequests container-sm" id="requests">
         <div className="create">
             <h2>Have a Prayer request?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, vitae reiciendis? Impedit ad maiores tenetur enim eveniet earum officia neque repellat delectus voluptate reiciendis maxime, non dicta, saepe rerum velit.</p>
+            <p>If you would like our leaderes to pray for you or any concern that you have please feel free to fill out the form below. If you dont feel comfortable sharing your name please feel free to type "N/A" in the name section.</p>
             <form id="add-request-form" action="" role="form" onSubmit={handleSubmit}>
                 <label>Name</label>
                 <input 
