@@ -35,10 +35,10 @@ const router = createBrowserRouter([
         path:'/',
         element:<Home />
       },
-      {
-        path:'/about',
-        element:<About />
-      },
+      // {
+      //   path:'/about',
+      //   element:<About />
+      // },
       {
         path:'/leaders',
         element:<Leaders />
@@ -47,6 +47,10 @@ const router = createBrowserRouter([
         path:'/requests',
         element:<Requests />
       },
+      // {
+      //   path:'/requests',
+      //   element:<Requests />
+      // },
     ]
   }
 ]);
