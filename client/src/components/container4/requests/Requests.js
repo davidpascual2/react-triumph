@@ -75,7 +75,7 @@ export default function Requests(props) {
     
     <div className="fluidContainerRequests container-sm" id="requests">
         <div className="create">
-            <h2>Have a Prayer request?</h2>
+            <h2>Have a Prayer request??</h2>
             <p>If you would like our leaderes to pray for you or any concern that you have please feel free to fill out the form below. If you dont feel comfortable sharing your name please feel free to type "N/A" in the name section.</p>
             <form id="add-request-form" action="" role="form" onSubmit={handleSubmit}>
                 <label>Name</label>
